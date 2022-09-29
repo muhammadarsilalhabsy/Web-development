@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getter-setter</title>
+</head>
+<body>
+    <script>
+
+        class Animal{
+
+            get getName(){ // its not a function, but property
+                return this.name;
+            }
+
+            set setName(name){
+                this.name = name;
+            }
+
+            ubahNama(name){
+                this.name = name;
+            }
+
+            ambilNama(){
+                return this.name;
+            }
+
+        }
+
+        const tigger = new Animal();
+
+        tigger.setName = "Tigger";
+        console.info(tigger.getName);
+
+        const kitten = new Animal();
+        kitten.ubahNama("kucing kecil");
+        console.info(kitten.ambilNama());
+
+
+
+
+
+
+    </script>
+</body>
+</html>

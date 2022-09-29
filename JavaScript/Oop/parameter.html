@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameter</title>
+</head>
+<body>
+    <script>
+
+        // menggunakan paramerter pada constructor function (class)
+        function Hero(name, power, action){
+            this.name = name;
+            this.power = power;
+            this.action = function (action){
+                console.info(`${this.name} is ${action}`)
+            };
+            this.attack = function (enemy){
+            console.info(`${this.name} attacking ${enemy}, with ${this.power} power`);
+            }
+        }
+
+
+        const ucup = new Hero("Ucup", 3.4, "fly");
+
+        const jamal = new Hero("Jamal", 4.2, "walk");
+
+        ucup.attack(jamal.name);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

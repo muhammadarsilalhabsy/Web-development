@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method di Class</title>
+</head>
+<body>
+    <script>
+        
+        class Person{
+
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+
+                // method ini akan tertempel di class, dan bukan di prototype (tidak di rekomendasikan)
+                this.sayHai = function(newFriends){
+                    console.info(`hai ${newFriends}, my name is ${this.name}`);
+                }
+            }
+
+            // mehtod in akan tertempel di prototype (direkomendasikan)
+            greating(){
+                console.info("Hola amigous");
+            }
+
+        }
+
+        const jamal = new Person("Jamal", 20);
+        const otong = new Person("Otong", 31);
+
+        console.info(jamal);
+        console.info(otong);
+        jamal.sayHai(otong.name);
+        otong.greating();
+
+
+
+
+
+    </script>
+</body>
+</html>

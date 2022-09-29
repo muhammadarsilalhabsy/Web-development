@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private method</title>
+</head>
+<body>
+    <script>
+
+        class Person{
+
+            sayHi(name){
+                if(name != undefined){
+                    this.#sayHiWithName(name);
+                }else{
+                    this.#sayHiWithoutName();
+                }
+            }
+
+            #sayHiWithName(name){
+                console.info(`Hi, ${name}`)
+            }
+            
+            #sayHiWithoutName(){
+                console.info(`Hi bro!`);
+            }
+        }
+
+        const orang = new Person();
+
+        console.info(orang);
+        orang.sayHi("jamal");
+
+
+
+
+    </script>
+</body>
+</html>

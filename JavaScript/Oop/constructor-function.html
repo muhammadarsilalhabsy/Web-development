@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Function</title>
+</head>
+<body>
+    
+    <script>
+
+        // cara membuat constructor function
+
+        function Person(){
+            this.firstName = "";
+            this.ipk = 0;
+        };
+
+        // cara membuat object
+        const ucup = new Person();
+        const jamal = new Person();
+
+        ucup.firstName = "Ucup";
+        ucup.ipk = 3.5;
+        jamal.firstName = "Jamal";
+        jamal.ipk = 4.0;
+
+
+        console.info(ucup);
+        console.info(jamal);
+        console.info(ucup.firstName);
+        console.info(ucup.ipk);
+        console.info(jamal.firstName);
+        console.info(jamal.ipk);
+
+
+
+
+    </script>
+</body>
+</html>

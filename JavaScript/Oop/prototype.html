@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+
+        function Hero(name){
+            this.name = name;
+        }
+
+
+        const ucup = new Hero("ucup");
+        const jamal = new Hero("jamal");
+
+
+        // akan di panggil paling pertama (property utama) (1)
+        ucup.sayBye = function (){
+            return "bye all";
+        }
+
+        // akan dipanggil setelah di cek, apabila data tidak ada di property utama (2)
+        // cara mengambahkan prototype
+        Hero.prototype.sayBye = function(){
+            return "bye bye mother father!";
+        }
+
+        Hero.prototype.run = function(){
+            console.info(`${this.name} is running`);
+        }
+
+        // akan dipanggil seltelah melalui property utama dan prototype kedua (3)
+        Object.prototype.hahahihi = function(){
+            console.info("hahahihi");
+        }
+
+        console.info(ucup);
+        console.info(jamal);
+
+        console.info(ucup.sayBye());
+        jamal.run();
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

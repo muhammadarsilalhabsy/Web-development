@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instance of</title>
+</head>
+<body>
+    <script>
+
+
+        class Manager{
+
+        }
+
+        class Employee{
+
+        }
+
+        const budi = new Manager();
+        const jamal = new Employee();
+
+
+        console.info(typeof(budi)); // object
+        console.info(typeof(jamal)); // object
+
+        console.info(budi instanceof Manager); // true
+        console.info(budi instanceof Employee); // false
+        console.info(jamal instanceof Manager); // false 
+        console.info(jamal instanceof Employee); // true
+
+
+        testInstanceof(budi);
+        testInstanceof(jamal);
+
+
+        function testInstanceof(name){
+            if(name instanceof Manager){
+                console.info(`${name} is instanceof Manager`);
+            }else {
+                console.info(`${name} is instanceof Employee`);
+            }
+        }
+
+
+        // coba coba jih
+
+        function Coba(){
+            this.sayHallo = function (){
+                console.info("hallo form Coba")
+            }
+        }
+
+        class Apa extends Coba{
+
+        }
+
+        const coba = new Coba();
+        console.info(coba instanceof Coba);
+
+        const sembarang = new Apa();
+        sembarang.sayHallo();
+
+        console.info(sembarang instanceof Coba); 
+
+
+    </script>
+</body>
+</html>

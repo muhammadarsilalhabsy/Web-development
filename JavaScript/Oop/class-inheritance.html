@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inheritance</title>
+</head>
+<body>
+    <script>
+
+        class Human{
+            sayHalo(name){
+                console.info(`Hallo ${name}, my name is Human ${this.name}`);
+            }
+        }
+        class Hero extends Human{
+            sayHalo(name){
+                console.info(`Hallo ${name}, my name is Hero ${this.name}`);
+            }
+        }
+
+        const suparmin = new Human();
+        const otong = new Hero();
+        suparmin.name = "suparmin";
+        otong.name = "otong";
+
+
+        suparmin.sayHalo("onaadi");
+        otong.sayHalo("qory");
+
+        console.info(suparmin);
+        console.info(otong);
+
+
+
+
+
+    </script>
+</body>
+</html>

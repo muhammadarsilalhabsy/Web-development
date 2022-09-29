@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    
+
+    <script>
+        // manual mengambil data dari object dan array
+        {
+            console.info("===Menggambil data dengan manual===");
+            const array = ["Muhammad", "Arsil","Alhabsy"];
+
+            for (let i = 0; i < array.length; i++){
+                console.info(array[i]);
+            }
+
+            const person = {
+                firstName: "Ucup",
+                middleName: "Bin",
+                lastName: "Surucup",
+            }
+
+            console.info(person.firstName);
+            console.info(person.middleName);
+            console.info(person.lastName);
+        }
+        
+        // menggunakan destructuring
+
+        {
+            console.info("\n===Menggambil data dengan destructuring===");
+            const array = ["Muhammad", "Arsil","Alhabsy", "Ucup", "surucup"];
+            const [first, middle, last, ...others] = array;
+            console.info(`${first} ${middle} ${last}`)
+            console.info(others)
+
+            const person = {
+                firstName: "Ucup",
+                middleName: "Bin",
+                lastName: "Surucup",
+                addres: {
+                    city: "Kendari",
+                    street: "Lorong Kali Wanggu",
+                    country: "Indonesia"
+                },
+                hobby: "tidur",
+            }
+
+            const {firstName, middleName, lastName, ...yangLain} = person;
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+            console.info(yangLain)
+        }
+
+        {
+            console.info("\nMenggunakan destructuring di Nested Object")
+            const person = {
+                firstName: "Ucup",
+                middleName: "Bin",
+                lastName: "Surucup",
+                addres: {
+                    city: "Kendari",
+                    street: "Lorong Kali Wanggu",
+                    country: "Indonesia"
+                },
+                hobby: "tidur",
+            }
+
+            const {firstName, middleName, lastName, addres:{city, street, country}, ...yangLain} = person;
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+            console.info(city);
+            console.info(country);
+            console.info(yangLain)
+        }
+
+        {
+            console.info("\nMenggunakan destructuring di function")
+
+            const person = {
+                firstName: "Ucup",
+                middleName: "Bin",
+                lastName: "Surucup",
+                addres: {
+                    city: "Kendari",
+                    street: "Lorong Kali Wanggu",
+                    country: "Indonesia"
+                },
+                hobby: "tidur",
+                }   
+
+            // cara lama
+            function printPerson(person){
+                console.info(person.firstName);
+                console.info(person.middleName);
+                console.info(person.lastName);
+            }
+
+            console.info("Cara lama")
+            printPerson(person);
+
+            // dengan destructuring
+            function showPerson({firstName, middleName, lastName}){
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+            
+            console.info("Cara destructuring")
+            showPerson(person);
+
+
+            // array bisa
+            function sum(array){
+                return array[0] + array[1];
+            }
+
+            console.info(sum([4,5]));
+            
+            // array destructuring
+            function multiply([a1, a2]){
+                return a1 * a2;
+            }
+            
+            console.info(multiply([4,5]));
+
+        }
+
+        {
+            // Default value
+
+            const person ={
+                firstName : "Muhammad",
+                middleName : "joko",
+                lastName : "Alhabsy",
+            }
+
+            function printPerson({firstName, middleName = "Arsil", lastName}){
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+            printPerson(person);
+
+            const names = ["yuyun", "Jamal", "Suriadi", "Terserah saya"];
+            const [first, second, third, fourth = "Nda tau"] = names;
+
+            console.info(first);
+            console.info(second);
+            console.info(third);
+            console.info(fourth);
+
+        }
+        {
+            // menggunakan nama lain untuk memanggil sebuah value di object
+            
+            const heros = {
+                spider: "man",
+                bat: "black man",
+                turtle: "donataleo"
+            }
+
+            const {
+                spider: labalaba,
+                bat: kelelawar,
+                turtle: kurakura,
+            } = heros
+
+            console.info(labalaba);
+            console.info(kelelawar);
+            console.info(kurakura);
+
+        }
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

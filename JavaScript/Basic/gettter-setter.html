@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter Setter</title>
+</head>
+<body>
+    <script>
+        
+        const person = {
+            firstName : "Muhammad",
+            middleName : "Arsil",
+            lastName: "Alhabsy",
+            get fullName() { // this is a properties
+                return `${this.firstName} ${this.middleName} ${this.lastName}`;
+            },
+            manualFull : function (){ // this is a function
+                return `${this.firstName} ${this.middleName} ${this.lastName}`;
+            },
+            set arrayName(data) {
+                const array = data.split(" ");
+                this.firstName = array[0];
+                this.middleName = array[1];
+                this.lastName = array[2];
+            }     
+        }
+
+
+        console.info(person.fullName);
+        console.info(person.manualFull());
+
+        person.arrayName = "Jamaludin bin sapein";
+        console.info(person.fullName);
+        console.table(person); 
+        
+
+    </script>
+</body>
+</html>

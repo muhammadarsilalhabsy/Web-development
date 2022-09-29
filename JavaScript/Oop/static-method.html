@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Method</title>
+</head>
+<body>
+    <script>
+
+        class MathUtil{
+            static sum(...values){
+                let total = 0;
+                for(let data of values){
+                    total += data;
+                }
+                return total;
+            }
+        }
+
+        let getSum = MathUtil.sum(5,4,3,2,1); // must be 15
+        console.info(getSum);
+
+        class MathUtil2{
+            sum(...values){
+                let total = 1;
+                for(let data of values){
+                    total *= data;
+                }
+                return total;
+            }
+        }
+
+        const calculator = new MathUtil2();
+        let getCalSum = calculator.sum(9,8,7,6,5);
+        console.info(getCalSum); // must be 15120
+
+
+    </script>
+</body>
+</html>

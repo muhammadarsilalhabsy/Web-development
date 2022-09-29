@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method di Constructor Function</title>
+</head>
+<body>
+    
+    <script>
+
+        // cara membuat constructor function atau class
+
+        function Person(){
+            this.name = "";
+            this.ipk = 0;
+            this.sayHallo = function(friends){
+                console.info(`Hallo ${friends}, how are you? btw my name is ${this.name} `);
+            }
+        };
+
+        // cara membuat object
+        const ucup = new Person();
+        const jamal = new Person();
+
+        jamal.name = "Jamal ludin";
+        ucup.name = "Ucup surucup"
+        ucup.sayHallo(jamal.name);
+
+
+
+
+    </script>
+</body>
+</html>
