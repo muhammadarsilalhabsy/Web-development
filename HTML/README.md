@@ -54,15 +54,15 @@ contoh:
 
 ## Penggunaan tag ```<h1> - <h6>```
 
-![gambar haeder](/gambar/penggunaan-heading.png "how to use tag h1 - h6")
+![gambar haeder](gambar/penggunaan-heading.png "how to use tag h1 - h6")
 
 
 ## Tag list
 - **ol (ordered list)**
 code:
-![ol dan li](/gambar/ol-dan-li.png "how to use ol and li")
+![ol dan li](gambar/ol-dan-li.png "how to use ol and li")
 result:
-![result ol dan li](/gambar/ol-result.png "result using ol and li")
+![result ol dan li](gambar/ol-result.png "result using ol and li")
 
 - **ul (unordered list)**
 code:
@@ -72,6 +72,6 @@ result:
 
 - **dl (definition list)**
 code:
-![ol dan li](/gambar/definition-list.png "how to use dl, dt and dd")
+![ol dan li](gambar/definition-list.png "how to use dl, dt and dd")
 result:
-![result ol dan li](/gambar/dl-result.png "result using dl, dt and dd")
+![result ol dan li](gambar/dl-result.png "result using dl, dt and dd")
