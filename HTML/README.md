@@ -59,19 +59,29 @@ contoh:
 
 ## Tag list
 - **ol (ordered list)**
+
 code:
+
 ![ol dan li](gambar/ol-dan-li.png "how to use ol and li")
+
 result:
+
 ![result ol dan li](gambar/ol-result.png "result using ol and li")
 
 - **ul (unordered list)**
 code:
-![ol dan li](/gambar/ul-dan-li.png "how to use ul and li")
+
+![ol dan li](gambar/ul-dan-li.png "how to use ul and li")
+
 result:
-![result ol dan li](/gambar/ul-result.png "result using ul and li")
+
+![result ol dan li](gambar/ul-result.png "result using ul and li")
 
 - **dl (definition list)**
 code:
+
 ![ol dan li](gambar/definition-list.png "how to use dl, dt and dd")
+
 result:
+
 ![result ol dan li](gambar/dl-result.png "result using dl, dt and dd")
