@@ -12,7 +12,7 @@ untuk memanipulasi node ada beberapa bethod yang digunakan
 */ 
 
 
-// create a element
+// create an element
 const newP = document.createElement('p');
 const newTextP = document.createTextNode("paragraf baru");
 newP.appendChild(newTextP);

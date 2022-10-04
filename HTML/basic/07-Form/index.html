@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <!-- 
+        element yang bisa digunakan dalam form
+        1. input
+            - text
+            - password
+            - radio
+            - checkbox
+            !- submit
+            !- reset
+            !- button
+        2. textarea
+        3. select
+        4. button
+            - submit
+            - reset
+            - button
+        5. label
+    
+    -->
+
+    <!-- input -->
+    <h1>Input</h1>
+    <form action="">
+      <label for="username">Username : </label>
+      <input type="text" name="" id="username" />
+      <br />
+      <label for="katasandi">Password :</label>
+      <input type="password" />
+      <br />
+      <input type="radio" id="gender-male" name="gender" /><label
+        for="gender-male"
+        >Pria</label
+      >
+      <input type="radio" id="gender-female" name="gender" /><label
+        for="gender-female"
+        >Wanita</label
+      >
+      <br />
+      <input type="checkbox" id="somay" /><label for="somay">Somay</label>
+      <input type="checkbox" id="nasgor" /><label for="nasgor"
+        >Nasi Goreng</label
+      >
+      <input type="checkbox" id="mei-pangsit" /><label for="mei-pangsit"
+        >Mie Pangsit</label
+      >
+      <input type="checkbox" id="ayam" /><label for="ayam">Ayam Goreng</label>
+    </form>
+
+    <br /><br />
+    <h1>Button</h1>
+
+    <form action="">
+      <button type="submit">Gaskan</button>
+    </form>
+
+    <br /><br />
+    <h1>Text area</h1>
+    <form action="">
+      <label for="text-area-input">tulis di sini</label>
+      <br />
+      <textarea name="" id="text-area-input" cols="50" rows="10"></textarea>
+    </form>
+
+    <br /><br />
+    <h1>Dropdown</h1>
+
+    <form action="">
+      <select name="" id="">
+        <option value="">Kendari</option>
+        <option value="">raha</option>
+        <option value="">Buton</option>
+      </select>
+    </form>
+
+    <!-- 
+    <table border="1" cellspacing="0" cellpadding="5">
+      <tr>
+        <td><label>Input</label></td>
+      </tr>
+      <tr>
+        <td>
+          <form action="">
+            <input type="text" />
+          </form>
+        </td>
+      </tr>
+    </table> -->
+  </body>
+</html>
